@@ -10,12 +10,12 @@
 // BONUS: rendere funzionante il form presente in pagina
 
 const teamMembers = [
-    newDude = {
+    newMember = {
         profilePic: "img/wayne-barnett-founder-ceo.jpg",
         fullName: "Wayne Barnett",
         memberRole: "Founder & CEO"
     },
-    newDude = {
+    newMember = {
         profilePic: "img/angela-caroll-chief-editor.jpg",
         fullName: "Angela Caroll",
         memberRole: "Chief Editor"
@@ -47,15 +47,14 @@ const newImage = document.querySelector("#image");
 const addMember = document.querySelector("#addMemberButton");
 addMember.addEventListener("click",
     function () {
-        const newDude = Object.create(teamMembers);
-        newDude.fullName = (newFullName.value);
-        newDude.memberRole = (newRole.value);
-        newDude.profilePic = (newImage.value);
-        console.log(newDude);
-        // newFullName.value = "";
-        // newRole.value = "";
-        // newImage.value = "";
-        // console.log(teamMembers);
+        let newMember = Object.create(teamMembers);
+        newMember.fullName = (newFullName.value);
+        newMember.memberRole = (newRole.value);
+        newMember.profilePic = (newImage.value);
+        console.log(newMember);
+        newFullName.value = "";
+        newRole.value = "";
+        newImage.value = "";
     }
 );
-console.log(newDude);
+console.log(newMember);
