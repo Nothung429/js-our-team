@@ -43,18 +43,18 @@ for (let i = 0 ; i < teamMembers.length ; i++) {
 const newFullName = document.querySelector("#name");
 const newRole = document.querySelector("#role");
 const newImage = document.querySelector("#image");
-const addMember = document.querySelector("#addMemberButton");
 
+const addMember = document.querySelector("#addMemberButton");
 addMember.addEventListener("click",
     function () {
         const newMember = `
             <div class="team-card">
                 <div class="card-image">
-                    <img src="${(newImage.value).profilePic}" alt="Wayne Barnett"/>
+                    <img src="${newImage.value}" alt="Wayne Barnett"/>
                 </div>
                 <div class="card-text">
-                    <h3>${(newFullName.value).fullName}</h3>
-                    <p>${(newRole.value).memberRole}</p>
+                    <h3>${newFullName.value}</h3>
+                    <p>${newRole.value}</p>
                 </div>
             </div>
         `;
@@ -66,4 +66,3 @@ addMember.addEventListener("click",
     }
 );
 console.log(card);
-// let newMember = Object.create(teamMembers);
