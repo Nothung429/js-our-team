@@ -1,6 +1,17 @@
-//------ FUNCTIONS ------//
-
-
+//------ FUNCTION ------//
+function userInfo (name , role , picture) {
+    return `
+        <div class="team-card">
+            <div class="card-image">
+                <img src="${picture}" alt="Wayne Barnett"/>
+            </div>
+            <div class="card-text">
+                <h3>${name}</h3>
+                <p>${role}</p>
+            </div>
+        </div>    
+    `;
+};
 
 //------ MAIN ------//
 // 1. creo un array che contenga come oggetto i componeti del team
@@ -26,17 +37,7 @@ console.log()
 const card = document.querySelector(".team-container");
 
 for (let i = 0 ; i < teamMembers.length ; i++) {
-    const member = `
-        <div class="team-card">
-            <div class="card-image">
-                <img src="${teamMembers[i].profilePic}" alt="Wayne Barnett"/>
-            </div>
-            <div class="card-text">
-                <h3>${teamMembers[i].fullName}</h3>
-                <p>${teamMembers[i].memberRole}</p>
-            </div>
-        </div>    
-    `;
+    const member =  userInfo(teamMembers[i].fullName,teamMembers[i].memberRole,teamMembers[i].profilePic);
     card.innerHTML += member;
 }
 
@@ -47,17 +48,7 @@ const newImage = document.querySelector("#image");
 const addMember = document.querySelector("#addMemberButton");
 addMember.addEventListener("click",
     function () {
-        const newMember = `
-            <div class="team-card">
-                <div class="card-image">
-                    <img src="${newImage.value}" alt="Wayne Barnett"/>
-                </div>
-                <div class="card-text">
-                    <h3>${newFullName.value}</h3>
-                    <p>${newRole.value}</p>
-                </div>
-            </div>
-        `;
+        const newMember = userInfo(newFullName.value,newRole.value,newImage.value);
         card.innerHTML += newMember;
         console.log(card);
         newFullName.value = "";
@@ -66,3 +57,30 @@ addMember.addEventListener("click",
     }
 );
 console.log(card);
+
+
+// CICLO FOR
+// `
+//     <div class="team-card">
+//         <div class="card-image">
+//             <img src="${teamMembers[i].profilePic}" alt="Wayne Barnett"/>
+//         </div>
+//         <div class="card-text">
+//             <h3>${teamMembers[i].fullName}</h3>
+//             <p>${teamMembers[i].memberRole}</p>
+//         </div>
+//     </div>    
+// `;
+
+// CLICK
+// `
+//     <div class="team-card">
+//         <div class="card-image">
+//             <img src="${newImage.value}" alt="Wayne Barnett"/>
+//         </div>
+//         <div class="card-text">
+//             <h3>${newFullName.value}</h3>
+//             <p>${newRole.value}</p>
+//         </div>
+//     </div>
+// `;
