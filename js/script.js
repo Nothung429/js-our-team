@@ -30,6 +30,26 @@ const teamMembers = [
         profilePic: "img/angela-caroll-chief-editor.jpg",
         fullName: "Angela Caroll",
         memberRole: "Chief Editor"
+    },
+    newMember = {
+        profilePic: "img/walter-gordon-office-manager.jpg",
+        fullName: "Walter Gordon",
+        memberRole: "Office Manager"
+    },
+    newMember = {
+        profilePic: "img/angela-lopez-social-media-manager.jpg",
+        fullName: "Angela Lopez",
+        memberRole: "Social Media Manager"
+    },
+    newMember = {
+        profilePic: "img/scott-estrada-developer.jpg",
+        fullName: "Scott Estrada",
+        memberRole: "Developer"
+    },
+    newMember = {
+        profilePic: "img/barbara-ramos-graphic-designer.jpg",
+        fullName: "Barbara Ramos",
+        memberRole: "Graphic Designer"
     }
 ];
 console.log()
@@ -57,30 +77,3 @@ addMember.addEventListener("click",
     }
 );
 console.log(card);
-
-
-// CICLO FOR
-// `
-//     <div class="team-card">
-//         <div class="card-image">
-//             <img src="${teamMembers[i].profilePic}" alt="Wayne Barnett"/>
-//         </div>
-//         <div class="card-text">
-//             <h3>${teamMembers[i].fullName}</h3>
-//             <p>${teamMembers[i].memberRole}</p>
-//         </div>
-//     </div>    
-// `;
-
-// CLICK
-// `
-//     <div class="team-card">
-//         <div class="card-image">
-//             <img src="${newImage.value}" alt="Wayne Barnett"/>
-//         </div>
-//         <div class="card-text">
-//             <h3>${newFullName.value}</h3>
-//             <p>${newRole.value}</p>
-//         </div>
-//     </div>
-// `;
