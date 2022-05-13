@@ -19,8 +19,7 @@ const teamMembers = [
         profilePic: "img/angela-caroll-chief-editor.jpg",
         fullName: "Angela Caroll",
         memberRole: "Chief Editor"
-    },
-
+    }
 ];
 console.log()
 
@@ -45,16 +44,26 @@ const newFullName = document.querySelector("#name");
 const newRole = document.querySelector("#role");
 const newImage = document.querySelector("#image");
 const addMember = document.querySelector("#addMemberButton");
+
 addMember.addEventListener("click",
     function () {
-        let newMember = Object.create(teamMembers);
-        newMember.fullName = (newFullName.value);
-        newMember.memberRole = (newRole.value);
-        newMember.profilePic = (newImage.value);
-        console.log(newMember);
+        const newMember = `
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="${(newImage.value).profilePic}" alt="Wayne Barnett"/>
+                </div>
+                <div class="card-text">
+                    <h3>${(newFullName.value).fullName}</h3>
+                    <p>${(newRole.value).memberRole}</p>
+                </div>
+            </div>
+        `;
+        card.innerHTML += newMember;
+        console.log(card);
         newFullName.value = "";
         newRole.value = "";
         newImage.value = "";
     }
 );
-console.log(newMember);
+console.log(card);
+// let newMember = Object.create(teamMembers);
