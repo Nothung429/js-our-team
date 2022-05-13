@@ -16,21 +16,12 @@ const teamMembers = [
         memberRole: "Founder & CEO"
     },
     {
-        profilePic: "img/wayne-barnett-founder-ceo.jpg",
-        fullName: "Wayne Barnett",
-        memberRole: "Founder & CEO"
-    },
-    {
-        profilePic: "img/wayne-barnett-founder-ceo.jpg",
-        fullName: "Wayne Barnett",
-        memberRole: "Founder & CEO"
-    },
-    {
-        profilePic: "img/wayne-barnett-founder-ceo.jpg",
-        fullName: "Wayne Barnett",
-        memberRole: "Founder & CEO"
+        profilePic: "img/angela-caroll-chief-editor.jpg",
+        fullName: "Angela Caroll",
+        memberRole: "Chief Editor"
     },
 ];
+console.log()
 
 const card = document.querySelector(".team-container");
 
@@ -48,4 +39,22 @@ for (let i = 0 ; i < teamMembers.length ; i++) {
     `;
     card.innerHTML += member;
 }
-console.log(card);
+
+const newFullName = document.querySelector("#name");
+const newRole = document.querySelector("#role");
+const newImage = document.querySelector("#image");
+const addMember = document.querySelector("#addMemberButton");
+
+addMember.addEventListener("click",
+    function () {
+        teamMembers.push(newFullName.value);
+        teamMembers.push(newRole.value);
+        teamMembers.push(newImage.value);
+        console.log(teamMembers);
+        // newFullName.value = "";
+        // newRole.value = "";
+        // newImage.value = "";
+        // console.log(teamMembers);
+    }
+);
+console.log(teamMembers);
