@@ -47,9 +47,10 @@ const newImage = document.querySelector("#image");
 const addMember = document.querySelector("#addMemberButton");
 addMember.addEventListener("click",
     function () {
-        newDude.new = (newFullName.value);
-        newDude.wen = (newRole.value);
-        newDude.mew = (newImage.value);
+        const newDude = Object.create(teamMembers);
+        newDude.fullName = (newFullName.value);
+        newDude.memberRole = (newRole.value);
+        newDude.profilePic = (newImage.value);
         console.log(newDude);
         // newFullName.value = "";
         // newRole.value = "";
